@@ -1,0 +1,29 @@
+{
+  "text.pomidor.horse_stats": "§7➟ {speed} §2⇮ {jump} §c♥ {health}",
+
+  "message.pomidor.overworld": "Верхний мир → {posX}, {posY}, {posZ}\nАд → {netherX}, {posY}, {netherZ}",
+  "message.pomidor.nether": "Ад → {posX}, {posY}, {posZ}\nВерхний мир → {overworldX}, {posY}, {overworldZ}",
+  "message.pomidor.invalid_world": "Мир должен быть OVERWORLD или NETHER!!!",
+
+  "message.pomidor.on": "§aВкл.",
+  "message.pomidor.off": "§cВыкл.",
+  "message.pomidor.playersNameTagsRender": "Скрыть ники игроков: ",
+  "message.pomidor.forceShowNameTagsRender": "Принудительное отображение имен мобов: ",
+  "message.pomidor.visibleLightBlockRender": "Отображение блока света: ",
+
+  "key.category.minecraft.pomidor": "Pomidor",
+  "key.pomidor.toggleVisibleLightBlock": "Переключить отображение блока света",
+  "key.pomidor.toggleForceShowNameTagsRender": "Переключить отображение имен мобов",
+  "key.pomidor.togglePlayersNameTagsRender": "Переключить отображение имен игроков",
+
+  "text.config.pomidor-config.title": "Pomidor",
+  "text.config.pomidor-config.option.isLightBlockVisible": "Переключить отображение блока света",
+  "text.config.pomidor-config.option.forceShowNameTags": "Переключить отображение имен мобов",
+  "text.config.pomidor-config.option.hidePlayersNameTags": "Переключить отображение имен игроков",
+
+  "text.config.pomidor-config.section.HUDInfo": "HUD Info",
+  "text.config.pomidor-config.option.toggleHUDInfo": "Отображение",
+  "text.config.pomidor-config.option.textHUDInfo": "Текст",
+  "text.config.pomidor-config.option.intendXHUDInfo": "Отступ по X",
+  "text.config.pomidor-config.option.intendZHUDInfo": "Отступ по Z"
+}

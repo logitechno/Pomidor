@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "ru.logitechno.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+      "EntityRenderNameMixin",
+      "LightBlockMixin",
+      "PlayerEntityRendererMixin",
+      "AbstractBlockMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

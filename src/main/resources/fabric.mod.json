@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "pomidor",
+  "version": "${version}",
+  "name": "Pomidor",
+  "description": "Multifunctional client-side mod",
+  "authors": [
+    "logitechno_"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/pomidor",
+    "issues": "https://github.com/logitechno/Pomidor/issues"
+  },
+  "license": "GPL 3.0",
+  "icon": "assets/pomidor/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "ru.logitechno.Pomidor"
+    ]
+  },
+  "mixins": [
+    "pomidor.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "~1.21.10",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
