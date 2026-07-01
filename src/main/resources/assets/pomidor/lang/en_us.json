@@ -1,0 +1,42 @@
+{
+  "key.category.minecraft.pomidor": "Pomidor",
+  "text.config.pomidor-config.title": "Pomidor",
+
+  "text.pomidor.horse_stats": "&7➟ {speed} &2⇮ {jump} &c♥ {health}",
+
+  "message.pomidor.overworld": "Overworld → {posX}, {posY}, {posZ}\nNether → {netherX}, {posY}, {netherZ}",
+  "message.pomidor.nether": "Nether → {posX}, {posY}, {posZ}\nOverworld → {overworldX}, {posY}, {overworldZ}",
+  "message.pomidor.invalid_world": "The world must be OVERWORLD or NETHER!!!",
+
+  "message.pomidor.on": "§aOn",
+  "message.pomidor.off": "§cOff",
+  "message.pomidor.playersNameTagsRender": "Players name tags rendering: ",
+  "message.pomidor.forceShowMobNameTagsRender": "Mob Name tag rendering: ",
+  "message.pomidor.visibleLightBlockRender": "Light block rendering: ",
+
+  "key.pomidor.toggleVisibleLightBlock": "Toggle Light Block Rendering",
+  "key.pomidor.toggleForceShowMobNameTagsRender": "Toggle Mod Name Tag Rendering",
+  "key.pomidor.togglePlayersNameTagsRender": "Toggle Player Name Tag Rendering",
+
+  "text.config.pomidor-config.option.isLightBlockVisible": "Toggle Light Block Rendering",
+  "text.config.pomidor-config.option.forceShowMobNameTags": "Toggle Mod Name Tag Rendering",
+
+  "text.config.pomidor-config.option.playersNameTags": "Toggle Player Name Tag Rendering",
+  "text.config.pomidor-config.enum.choices.default": "Default",
+  "text.config.pomidor-config.enum.choices.hide": "Hide",
+  "text.config.pomidor-config.enum.choices.force": "Force",
+
+
+  "text.config.pomidor-config.section.HUDInfo": "HUD Info",
+  "text.config.pomidor-config.option.showHUDInfo": "Display",
+  "text.config.pomidor-config.option.textHUDInfo": "Text",
+  "text.config.pomidor-config.option.intendXHUDInfo": "Indent X",
+  "text.config.pomidor-config.option.intendZHUDInfo": "Indent Z",
+
+  "text.config.pomidor-config.section.DeathMessage": "Death Message",
+  "text.config.pomidor-config.option.showDeathMessage": "Display",
+  "text.config.pomidor-config.option.textDeathMessage": "Message",
+  "dimension.minecraft.overworld": "Overworld",
+  "dimension.minecraft.the_nether": "The Nether",
+  "dimension.minecraft.the_end": "The End"
+}

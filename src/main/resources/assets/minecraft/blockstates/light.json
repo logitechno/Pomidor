@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "level=0": {
+      "model": "pomidor:block/light_00"
+    },
+    "level=1": {
+      "model": "pomidor:block/light_01"
+    },
+    "level=2": {
+      "model": "pomidor:block/light_02"
+    },
+    "level=3": {
+      "model": "pomidor:block/light_03"
+    },
+    "level=4": {
+      "model": "pomidor:block/light_04"
+    },
+    "level=5": {
+      "model": "pomidor:block/light_05"
+    },
+    "level=6": {
+      "model": "pomidor:block/light_06"
+    },
+    "level=7": {
+      "model": "pomidor:block/light_07"
+    },
+    "level=8": {
+      "model": "pomidor:block/light_08"
+    },
+    "level=9": {
+      "model": "pomidor:block/light_09"
+    },
+    "level=10": {
+      "model": "pomidor:block/light_10"
+    },
+    "level=11": {
+      "model": "pomidor:block/light_11"
+    },
+    "level=12": {
+      "model": "pomidor:block/light_12"
+    },
+    "level=13": {
+      "model": "pomidor:block/light_13"
+    },
+    "level=14": {
+      "model": "pomidor:block/light_14"
+    },
+    "level=15": {
+      "model": "pomidor:block/light_15"
+    }
+  }
+}
