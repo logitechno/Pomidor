@@ -16,7 +16,7 @@ public class AvatarRendererMixin {
             cancellable = true
     )
     public void onShouldShowName(CallbackInfoReturnable<Boolean> cir) {
-        switch (Pomidor.CONFIG.playersNameTags()) {
+        switch (Pomidor.CONFIG.playersNameTags) {
             case HIDE:
                 cir.setReturnValue(false);
                 cir.cancel();

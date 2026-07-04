@@ -1,6 +1,7 @@
 package ru.logitechno.event;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
@@ -8,10 +9,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import ru.logitechno.Pomidor;
+import ru.logitechno.config.PomidorConfig;
 import ru.logitechno.util.MessageProvider;
-
-import static ru.logitechno.config.PomidorConfigModel.Choices.*;
-import static ru.logitechno.config.PomidorConfigModel.Choices.DEFAULT;
 
 public class KeyInputHandler {
     public static final KeyMapping.Category POMIDOR_CATEGORY = KeyMapping.Category.register(Identifier.parse("pomidor"));
@@ -43,37 +42,41 @@ public class KeyInputHandler {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (toggleVisibleLightBlockKey.consumeClick()) {
-                Minecraft.getInstance().levelRenderer.allChanged();
-                Pomidor.CONFIG.isLightBlockVisible(!Pomidor.CONFIG.isLightBlockVisible());
+                Minecraft.getInstance().levelExtractor.allChanged();
+                Pomidor.CONFIG.lightBlockVisible = !Pomidor.CONFIG.lightBlockVisible;
+                AutoConfig.getConfigHolder(PomidorConfig.class).save();
+
+
                 MessageProvider.sendMessage(
                         "message.pomidor.visibleLightBlockRender",
-                        Pomidor.CONFIG.isLightBlockVisible()
+                        Pomidor.CONFIG.lightBlockVisible
                 );
             }
 
             while (toggleForceShowNameTagsRenderKey.consumeClick()) {
-                Pomidor.CONFIG.forceShowMobNameTags(!Pomidor.CONFIG.forceShowMobNameTags());
+                Pomidor.CONFIG.forceShowMobNameTags = !Pomidor.CONFIG.forceShowMobNameTags;
+                AutoConfig.getConfigHolder(PomidorConfig.class).save();
+
                 MessageProvider.sendMessage(
                         "message.pomidor.forceShowMobNameTagsRender",
-                        Pomidor.CONFIG.forceShowMobNameTags()
+                        Pomidor.CONFIG.forceShowMobNameTags
                 );
             }
 
             while (togglePlayersNameTagsRenderKey.consumeClick()) {
-                switch (Pomidor.CONFIG.playersNameTags()) {
-                    case DEFAULT:
-                        Pomidor.CONFIG.playersNameTags(HIDE);
-                        break;
-                    case HIDE:
-                        Pomidor.CONFIG.playersNameTags(FORCE);
-                        break;
-                    default:
-                        Pomidor.CONFIG.playersNameTags(DEFAULT);
+                switch (Pomidor.CONFIG.playersNameTags) {
+                    case DEFAULT -> Pomidor.CONFIG.playersNameTags = PomidorConfig.Choices.HIDE;
+
+                    case HIDE -> Pomidor.CONFIG.playersNameTags = PomidorConfig.Choices.FORCE;
+
+                    case FORCE -> Pomidor.CONFIG.playersNameTags = PomidorConfig.Choices.DEFAULT;
                 }
+                AutoConfig.getConfigHolder(PomidorConfig.class).save();
+
                 var player = Minecraft.getInstance().player;
                 if (player == null) return;
                 player.sendOverlayMessage(
-                        Component.translatable("message.pomidor.playersNameTagsRender").append(Component.literal(Pomidor.CONFIG.playersNameTags().name()))
+                        Component.translatable("message.pomidor.playersNameTagsRender").append(Component.literal(Pomidor.CONFIG.playersNameTags.name()))
                 );
             }
         });

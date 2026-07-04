@@ -1,6 +1,4 @@
 {
-  "text.pomidor.horse_stats": "&7➟ {speed} &2⇮ {jump} &c♥ {health}",
-
   "message.pomidor.overworld": "Верхний мир → {posX}, {posY}, {posZ}\nАд → {netherX}, {posY}, {netherZ}",
   "message.pomidor.nether": "Ад → {posX}, {posY}, {posZ}\nВерхний мир → {overworldX}, {posY}, {overworldZ}",
   "message.pomidor.invalid_world": "Мир должен быть OVERWORLD или NETHER!!!",
@@ -11,26 +9,21 @@
   "message.pomidor.forceShowMobNameTagsRender": "Принудительное отображение имен мобов: ",
   "message.pomidor.visibleLightBlockRender": "Отображение блока света: ",
 
-  "key.category.minecraft.pomidor": "Pomidor",
+  "key.pomidor.togglePlayersNameTagsRender": "Переключить отображение ников игроков",
+  "key.pomidor.toggleForceShowMobNameTagsRender": "Переключить принудительное отображение имен мобов",
   "key.pomidor.toggleVisibleLightBlock": "Переключить отображение блока света",
-  "key.pomidor.toggleForceShowMobNameTagsRender": "Переключить отображение имен мобов",
-  "key.pomidor.togglePlayersNameTagsRender": "Переключить отображение имен игроков",
 
-  "text.config.pomidor-config.title": "Pomidor",
-  "text.config.pomidor-config.option.isLightBlockVisible": "Переключить отображение блока света",
-  "text.config.pomidor-config.option.forceShowMobNameTags": "Переключить отображение имен мобов",
+  "text.autoconfig.pomidor.option.playersNameTags": "Отображение ников игроков",
+  "text.autoconfig.pomidor.option.forceShowMobNameTags": "Принудительное отображение имен мобов",
+  "text.autoconfig.pomidor.option.lightBlockVisible": "Отображение блока света",
 
-  "text.config.pomidor-config.option.playersNameTags": "Переключить отображение имен игроков",
+  "text.autoconfig.pomidor.option.showHUDInfo": "Отображение",
+  "text.autoconfig.pomidor.option.textHUDInfo": "Текст",
+  "text.autoconfig.pomidor.option.offsetXHUDInfo": "Отступ по X",
+  "text.autoconfig.pomidor.option.offsetZHUDInfo": "Отступ по Z",
 
-  "text.config.pomidor-config.section.HUDInfo": "HUD Info",
-  "text.config.pomidor-config.option.showHUDInfo": "Отображение",
-  "text.config.pomidor-config.option.textHUDInfo": "Текст",
-  "text.config.pomidor-config.option.intendXHUDInfo": "Отступ по X",
-  "text.config.pomidor-config.option.intendZHUDInfo": "Отступ по Z",
-
-  "text.config.pomidor-config.section.DeathMessage": "Death Message",
-  "text.config.pomidor-config.option.showDeathMessage": "Отображение",
-  "text.config.pomidor-config.option.textDeathMessage": "Сообщение",
+  "text.autoconfig.pomidor.option.showDeathMessage": "Отображение",
+  "text.autoconfig.pomidor.option.textDeathMessage": "Сообщение",
   "dimension.minecraft.overworld": "Верхний мир",
   "dimension.minecraft.the_nether": "Нижний мир",
   "dimension.minecraft.the_end": "Край"

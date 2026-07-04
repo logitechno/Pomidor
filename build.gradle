@@ -24,6 +24,8 @@ repositories {
 	maven {
 		url 'https://maven.xpple.dev/maven2'
 	}
+	maven { url "https://maven.shedaniel.me/" }
+	maven { url "https://maven.terraformersmc.com/releases/" }
 }
 
 dependencies {
@@ -36,15 +38,25 @@ dependencies {
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
 	include implementation("dev.xpple:clientarguments:${project.clientarguments_version}")
-	annotationProcessor implementation("io.wispforest:owo-lib:${project.owo_version}")
-	
+	//annotationProcessor implementation("io.wispforest:owo-lib:${project.owo_version}")
+
+	api("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+	implementation("com.terraformersmc:modmenu:${project.modmenu_version}")
 }
 
 processResources {
 	inputs.property "version", project.version
+	inputs.property "loader_version", project.loader_version
+	inputs.property "minecraft_version", project.minecraft_version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": inputs.properties.version
+		expand (
+				"version": inputs.properties.version,
+				"minecraft_version": project.minecraft_version,
+				"loader_version": project.loader_version,
+		)
 	}
 }
 
@@ -63,6 +75,8 @@ java {
 }
 
 jar {
+	archiveFileName = "${project.archives_base_name}-${project.version}-${project.minecraft_version}.jar"
+
 	inputs.property "archivesName", project.base.archivesName
 
 	from("LICENSE") {

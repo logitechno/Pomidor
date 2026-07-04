@@ -18,7 +18,7 @@ public class MobRendererMixin<T extends Mob> {
             cancellable = true
     )
     private void onShouldShowName(T mobEntity, double d, CallbackInfoReturnable<Boolean> cir) {
-        if (Pomidor.CONFIG.forceShowMobNameTags()) {
+        if (Pomidor.CONFIG.forceShowMobNameTags) {
             Player player = Minecraft.getInstance().player;
             if (player == null) return;
 

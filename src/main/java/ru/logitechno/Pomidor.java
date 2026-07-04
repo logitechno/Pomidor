@@ -1,6 +1,9 @@
 package ru.logitechno;
 
 import com.mojang.brigadier.CommandDispatcher;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
@@ -19,10 +22,13 @@ import ru.logitechno.event.KeyInputHandler;
 public class Pomidor implements ModInitializer {
 	public static final String MOD_ID = "pomidor";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final PomidorConfig CONFIG = PomidorConfig.createAndLoad();
+	public static PomidorConfig CONFIG;
 
 	@Override
 	public void onInitialize() {
+		AutoConfig.register(PomidorConfig.class, JanksonConfigSerializer::new);
+		CONFIG = AutoConfig.getConfigHolder(PomidorConfig.class).getConfig();
+
         KeyInputHandler.register();
         UseEntityListener.register();
 

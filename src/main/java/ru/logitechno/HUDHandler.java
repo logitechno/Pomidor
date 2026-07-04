@@ -15,7 +15,7 @@ import ru.logitechno.util.Placeholder;
 
 public class HUDHandler {
     public static void render(GuiGraphicsExtractor graphics, DeltaTracker deltaTracker) {
-        if (!Pomidor.CONFIG.showHUDInfo()) return;
+        if (!Pomidor.CONFIG.showHUDInfo) return;
 
         Minecraft mc = Minecraft.getInstance();
         Font textRenderer = mc.font;
@@ -55,7 +55,7 @@ public class HUDHandler {
         Direction direction = player.getDirection();
         String facing = getFacing(direction);
 
-        Component message = Placeholder.replacePlaceholders(Pomidor.CONFIG.textHUDInfo(),
+        Component message = Placeholder.replacePlaceholders(String.join("\n", Pomidor.CONFIG.textHUDInfo),
                 new Placeholder.PlaceholderPair("posX", String.valueOf(posX)),
                 new Placeholder.PlaceholderPair("posY", String.valueOf(posY)),
                 new Placeholder.PlaceholderPair("posZ", String.valueOf(posZ)),
@@ -74,7 +74,7 @@ public class HUDHandler {
                 new Placeholder.PlaceholderPair("n", "\n")
         );
 
-        graphics.textWithWordWrap(textRenderer, message, Pomidor.CONFIG.intendXHUDInfo(), Pomidor.CONFIG.intendZHUDInfo(), 200, 0xFFFFFFFF);
+        graphics.textWithWordWrap(textRenderer, message, Pomidor.CONFIG.offsetXHUDInfo, Pomidor.CONFIG.offsetZHUDInfo, 200, 0xFFFFFFFF);
     }
 
     private static String getFacing(Direction direction) {
@@ -88,9 +88,9 @@ public class HUDHandler {
     }
 
     private static String getPingColor(int ping) {
-        if (ping < 50) return "§a"; // зелёный  — отлично
-        if (ping < 100) return "§e"; // жёлтый   — норм
-        if (ping < 200) return "§6"; // оранжевый — плохо
-        return "§c";                 // красный   — очень плохо
+        if (ping < 50) return "§a";
+        if (ping < 100) return "§e";
+        if (ping < 200) return "§6";
+        return "§c";
     }
 }

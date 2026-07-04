@@ -19,7 +19,7 @@ public class ClientPacketListenerMixin {
     @Inject(method = "handlePlayerCombatKill", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;shouldShowDeathScreen()Z"))
     private void onHandlePlayerCombatKill(ClientboundPlayerCombatKillPacket packet, CallbackInfo ci) {
         if (!RenderSystem.isOnRenderThread()) return;
-        if (Pomidor.CONFIG.showDeathMessage()) {
+        if (Pomidor.CONFIG.showDeathMessage) {
             Player player = Minecraft.getInstance().player;
             if (player == null) return;
 
@@ -28,7 +28,7 @@ public class ClientPacketListenerMixin {
             int posZ = (int) player.getZ();
             String dimension = Component.translatable("dimension." + player.level().dimensionTypeRegistration().unwrapKey().get().identifier().toLanguageKey()).getString();
 
-            Component message = Placeholder.replacePlaceholders(Pomidor.CONFIG.textDeathMessage(),
+            Component message = Placeholder.replacePlaceholders(String.join("\n", Pomidor.CONFIG.textDeathMessage),
                     new Placeholder.PlaceholderPair("posX", String.valueOf(posX)),
                     new Placeholder.PlaceholderPair("posY", String.valueOf(posY)),
                     new Placeholder.PlaceholderPair("posZ", String.valueOf(posZ)),

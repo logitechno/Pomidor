@@ -19,7 +19,7 @@ public abstract class LightBlockMixin extends BlockBehaviourMixin {
             cancellable = true
     )
     public void getShape(CallbackInfoReturnable<VoxelShape> cir) {
-        if (Pomidor.CONFIG.isLightBlockVisible()) {
+        if (Pomidor.CONFIG != null && Pomidor.CONFIG.lightBlockVisible) {
             cir.setReturnValue(Shapes.block());
         }
     }
@@ -30,7 +30,7 @@ public abstract class LightBlockMixin extends BlockBehaviourMixin {
             cancellable = true
     )
     public void getRenderType(CallbackInfoReturnable<RenderShape> cir) {
-        if (Pomidor.CONFIG.isLightBlockVisible()) {
+        if (Pomidor.CONFIG != null && Pomidor.CONFIG.lightBlockVisible) {
             cir.setReturnValue(RenderShape.MODEL);
         }
     }

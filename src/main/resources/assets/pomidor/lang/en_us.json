@@ -1,6 +1,6 @@
 {
   "key.category.minecraft.pomidor": "Pomidor",
-  "text.config.pomidor-config.title": "Pomidor",
+  "text.autoconfig.pomidor.title": "Pomidor",
 
   "text.pomidor.horse_stats": "&7➟ {speed} &2⇮ {jump} &c♥ {health}",
 
@@ -15,27 +15,23 @@
   "message.pomidor.visibleLightBlockRender": "Light block rendering: ",
 
   "key.pomidor.toggleVisibleLightBlock": "Toggle Light Block Rendering",
-  "key.pomidor.toggleForceShowMobNameTagsRender": "Toggle Mod Name Tag Rendering",
+  "key.pomidor.toggleForceShowMobNameTagsRender": "Force Mob Name Tag Rendering",
   "key.pomidor.togglePlayersNameTagsRender": "Toggle Player Name Tag Rendering",
 
-  "text.config.pomidor-config.option.isLightBlockVisible": "Toggle Light Block Rendering",
-  "text.config.pomidor-config.option.forceShowMobNameTags": "Toggle Mod Name Tag Rendering",
+  "text.autoconfig.pomidor.category.Rendering": "Rendering",
+  "text.autoconfig.pomidor.option.playersNameTags": "Player Name Tag Rendering",
+  "text.autoconfig.pomidor.option.forceShowMobNameTags": "Force Mob Name Tag Rendering",
+  "text.autoconfig.pomidor.option.lightBlockVisible": "Light Block Rendering",
 
-  "text.config.pomidor-config.option.playersNameTags": "Toggle Player Name Tag Rendering",
-  "text.config.pomidor-config.enum.choices.default": "Default",
-  "text.config.pomidor-config.enum.choices.hide": "Hide",
-  "text.config.pomidor-config.enum.choices.force": "Force",
+  "text.autoconfig.pomidor.category.HUDInfo": "HUD Info",
+  "text.autoconfig.pomidor.option.showHUDInfo": "Display",
+  "text.autoconfig.pomidor.option.textHUDInfo": "Text",
+  "text.autoconfig.pomidor.option.offsetXHUDInfo": "X offset",
+  "text.autoconfig.pomidor.option.offsetZHUDInfo": "Z offset",
 
-
-  "text.config.pomidor-config.section.HUDInfo": "HUD Info",
-  "text.config.pomidor-config.option.showHUDInfo": "Display",
-  "text.config.pomidor-config.option.textHUDInfo": "Text",
-  "text.config.pomidor-config.option.intendXHUDInfo": "Indent X",
-  "text.config.pomidor-config.option.intendZHUDInfo": "Indent Z",
-
-  "text.config.pomidor-config.section.DeathMessage": "Death Message",
-  "text.config.pomidor-config.option.showDeathMessage": "Display",
-  "text.config.pomidor-config.option.textDeathMessage": "Message",
+  "text.autoconfig.pomidor.category.DeathMessage": "Death Message",
+  "text.autoconfig.pomidor.option.showDeathMessage": "Display",
+  "text.autoconfig.pomidor.option.textDeathMessage": "Message",
   "dimension.minecraft.overworld": "Overworld",
   "dimension.minecraft.the_nether": "The Nether",
   "dimension.minecraft.the_end": "The End"

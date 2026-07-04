@@ -11,22 +11,25 @@
 		"homepage": "https://modrinth.com/mod/pomidor",
 		"issues": "https://github.com/logitechno/Pomidor/issues"
 	},
-	"license": "GPL 3.0",
+	"license": "MIT",
 	"icon": "assets/pomidor/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
 			"ru.logitechno.Pomidor"
+		],
+		"modmenu": [
+			"ru.logitechno.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [
 		"pomidor.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
-		"minecraft": "~26.1",
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~${minecraft_version}",
 		"java": ">=25",
 		"fabric-api": "*",
-		"owo": "*"
+		"cloth-config": "*"
 	}
 }
