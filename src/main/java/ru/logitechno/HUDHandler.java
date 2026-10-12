@@ -55,7 +55,7 @@ public class HUDHandler {
         Direction direction = player.getDirection();
         String facing = getFacing(direction);
 
-        Component message = Placeholder.replacePlaceholders(String.join("\n", Pomidor.CONFIG.textHUDInfo),
+        Component message = Placeholder.replacePlaceholders(Pomidor.CONFIG.textHUDInfo,
                 new Placeholder.PlaceholderPair("posX", String.valueOf(posX)),
                 new Placeholder.PlaceholderPair("posY", String.valueOf(posY)),
                 new Placeholder.PlaceholderPair("posZ", String.valueOf(posZ)),

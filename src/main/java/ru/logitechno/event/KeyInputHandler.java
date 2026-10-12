@@ -21,22 +21,22 @@ public class KeyInputHandler {
     public static void register() {
         toggleVisibleLightBlockKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.pomidor.toggleVisibleLightBlock",
-                InputConstants.Type.KEYSYM,
-                85,
+                InputConstants.Type.KEYBOARD,
+                12,
                 POMIDOR_CATEGORY
         ));
 
         toggleForceShowNameTagsRenderKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.pomidor.toggleForceShowMobNameTagsRender",
-                InputConstants.Type.KEYSYM,
-                79,
+                InputConstants.Type.KEYBOARD,
+                24,
                 POMIDOR_CATEGORY
         ));
 
         togglePlayersNameTagsRenderKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
                 "key.pomidor.togglePlayersNameTagsRender",
-                InputConstants.Type.KEYSYM,
-                73,
+                InputConstants.Type.KEYBOARD,
+                28,
                 POMIDOR_CATEGORY
         ));
 

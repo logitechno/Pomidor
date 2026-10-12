@@ -15,6 +15,7 @@
 	"client": [
 		"AvatarRendererMixin",
 		"ClientPacketListenerMixin",
-		"MobRendererMixin"
+		"MobRendererMixin",
+		"PlayerTabOverlayMixin"
 	]
 }

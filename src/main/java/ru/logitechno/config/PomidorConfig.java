@@ -32,21 +32,20 @@ public class PomidorConfig implements ConfigData {
     public boolean showHUDInfo = true;
 
     @ConfigEntry.Category("HUDInfo")
-    public List<String> textHUDInfo = Arrays.asList(
-            "&7Facing: &f{facing}",
-            "&7Pitch: &f{pitch}",
-            "&7Yaw: &f{yaw}",
-            "&7Speed: &f{speed}",
-            "&7FPS: &f{fps}",
-            "&7Biome: &f{biome}",
-            "&7XYZ: &f{posX} {posY} {posZ}",
-            "&7Time: &f{time}",
-            "&7Days: &f{days}",
-            "&7Dimension: &f{dimension}",
-            "&7Difficulty: &f{difficulty}",
-            "&7Ping: &f{ping}",
-            "&7Ping Colored: &f{pingColored}"
-    );
+    public String textHUDInfo =
+            "&7Facing: &f{facing}{n}" +
+                    "&7Pitch: &f{pitch}{n}" +
+                    "&7Yaw: &f{yaw}{n}" +
+                    "&7Speed: &f{speed}{n}" +
+                    "&7FPS: &f{fps}{n}" +
+                    "&7Biome: &f{biome}{n}" +
+                    "&7XYZ: &f{posX} {posY} {posZ}{n}" +
+                    "&7Time: &f{time}{n}" +
+                    "&7Days: &f{days}{n}" +
+                    "&7Dimension: &f{dimension}{n}" +
+                    "&7Difficulty: &f{difficulty}{n}" +
+                    "&7Ping: &f{ping}{n}" +
+                    "&7Ping Colored: &f{pingColored}";
 
     @ConfigEntry.Category("HUDInfo")
     public int offsetXHUDInfo = 2;

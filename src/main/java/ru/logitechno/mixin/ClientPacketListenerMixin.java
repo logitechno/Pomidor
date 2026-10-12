@@ -16,7 +16,13 @@ import ru.logitechno.util.Placeholder;
 
 @Mixin(ClientPacketListener.class)
 public class ClientPacketListenerMixin {
-    @Inject(method = "handlePlayerCombatKill", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;shouldShowDeathScreen()Z"))
+    @Inject(
+            method = "handlePlayerCombatKill",
+            at = @At(
+                    value = "INVOKE",
+                    target = "Lnet/minecraft/client/player/LocalPlayer;shouldShowDeathScreen()Z"
+            )
+    )
     private void onHandlePlayerCombatKill(ClientboundPlayerCombatKillPacket packet, CallbackInfo ci) {
         if (!RenderSystem.isOnRenderThread()) return;
         if (Pomidor.CONFIG.showDeathMessage) {
